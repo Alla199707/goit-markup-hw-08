@@ -1,0 +1,27 @@
+// utils
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+@import "./utils/visually-hidden";
+
+// base
+@import "./base/base";
+@import "./base/container";
+// components
+@import "./components/page-header";
+@import "./components/logo";
+@import "./components/site-nav";
+@import "./components/contacts";
+@import "./components/hero";
+@import "./components/feature";
+@import "./components/about";
+@import "./components/team";
+@import "./components/clients";
+// footer
+@import "./components/footer";
+@import "./components/footer-form";
+// portfolio
+@import "./components/portfolio-filter";
+@import "./components/portfolio-galery";
+// modal
+@import "./components/modal-form";

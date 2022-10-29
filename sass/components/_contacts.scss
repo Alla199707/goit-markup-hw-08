@@ -1,0 +1,28 @@
+.aut-nav {
+	display: flex;
+	gap: 50px;
+	margin-left: auto;
+}
+// .aut-nav__item + .aut-nav__item {
+// 	margin-left: 50px;
+// }
+.aut-nav__link {
+	color: var(--owner-text-color);
+	font-weight: 500;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	display: flex;
+	align-items: center;
+
+	transition: color 250ms var(--timing-function);
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+
+.aut-nav__icon {
+	fill: currentColor;
+	margin-right: 10px;
+}
