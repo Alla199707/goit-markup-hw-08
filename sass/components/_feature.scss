@@ -1,5 +1,11 @@
 .feature__section {
-  padding-top: 94px;
+  padding-top: 60px;
+  @media screen and (min-width: 768px) {
+    padding-top: 94px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
 }
 
 .feature__title {
@@ -8,18 +14,28 @@
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .feature__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
+  flex-direction: row;
   align-items: baseline;
+
+  gap: 30px;
 }
 .feature__item {
-  max-width: 270px;
+  // max-width: 270px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
   &::before {
     display: block;
     content: "";

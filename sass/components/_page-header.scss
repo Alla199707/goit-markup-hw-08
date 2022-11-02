@@ -1,4 +1,17 @@
 .page-header {
-	padding: 24px 0;
-	border-bottom: 1px solid #ececec;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line-color);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 60px;
+  width: 100%;
+  background-color: var(--secondory-white-color);
+
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
 }
