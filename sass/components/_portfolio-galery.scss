@@ -1,4 +1,4 @@
-.section {
+.projects__section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -8,12 +8,21 @@
   gap: 30px;
   /* justify-content: space-between; */
 }
-// .galery__item {
-// 	width: calc(100%-60px) / 3;
-// }
+.galery__item {
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
 .galery__wrap {
   position: relative;
   overflow: hidden;
+}
+
+.galery__wrap img {
+  width: auto;
 }
 
 .galery__text {

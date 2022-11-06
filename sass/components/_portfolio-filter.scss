@@ -32,7 +32,17 @@
 .filter__list {
   gap: 8px;
   row-gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
 }
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+
+.filter {
+  justify-content: center;
+  // mar
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
 }
+// .filter__item:not(:last-child) {
+//   margin-right: 8px;
+// }
