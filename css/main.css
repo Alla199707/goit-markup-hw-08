@@ -841,6 +841,7 @@ img {
   .logo {
     display: block;
     align-items: center;
+    justify-content: center;
   }
 }
 
@@ -1045,10 +1046,8 @@ img {
 }
 
 .filter__list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
+  gap: 8px;
+  row-gap: 15px;
 }
 
 .filter__item:not(:last-child) {

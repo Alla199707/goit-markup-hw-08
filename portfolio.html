@@ -39,15 +39,32 @@
   <body>
     <header class="page-header">
       <div class="container main-nav">
-        <nav class="main-nav">
-          <a
-            class="main-nav__logo logo"
-            href="./index.html"
-            lang="en"
-            >Web<span class="logo__header"
-              >Studio</span
-            >
-          </a>
+        <a
+          class="main-nav__logo logo"
+          href="./index.html"
+          lang="en"
+          >Web<span class="logo__header"
+            >Studio</span
+          >
+        </a>
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="mob-menu__img"
+            width="40"
+            height="40"
+            aria-label="Перемикач мобільного меню"
+          >
+            <use
+              href="./images/symbol-defs.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
+        <nav class="main-menu">
           <ul class="main-nav__list list">
             <li class="main-nav__item">
               <a
@@ -77,7 +94,7 @@
               href="mailto:info@devstudio.com"
             >
               <svg
-                class="aut-nav__icon"
+                class="aut-nav__icon aut-nav__icon--envelope"
                 width="16"
                 height="12"
               >
@@ -94,7 +111,7 @@
               href="tel:+380961111111"
             >
               <svg
-                class="aut-nav__icon"
+                class="aut-nav__icon aut-nav__icon--smartphone"
                 width="10"
                 height="16"
               >
@@ -103,6 +120,103 @@
                 ></use>
               </svg>
               +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="menu-container js-menu-container"
+        id="mobile-menu"
+      >
+        <button class="menu-toggle js-close-menu">
+          <svg width="40" height="40">
+            <use
+              href="./images/symbol-defs.svg#icon-close_mob"
+            ></use>
+          </svg>
+        </button>
+        <nav>
+          <ul class="mobile-menu list">
+            <li>
+              <a
+                href="./index.html"
+                class="mobile-menu__link mobile-menu__link--current"
+                >Студія</a
+              >
+            </li>
+            <li>
+              <a
+                href="./portfolio.html"
+                class="mobile-menu__link"
+                >Портфоліо</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="mobile-menu__link"
+                >Контакти</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <ul
+          class="mobile-menu mobile-menu--current list"
+        >
+          <li>
+            <a
+              href="tel:+380961111111"
+              class="mobile-menu__tel"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:info@devstudio.com"
+              class="mobile-menu__mail"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="menu-soc__list list">
+          <li class="menu-soc__item">
+            <a
+              class="menu-soc__link"
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Instagram
+            </a>
+          </li>
+          <li class="menu-soc__item">
+            <a
+              class="menu-soc__link"
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Twitter
+            </a>
+          </li>
+          <li class="menu-soc__item">
+            <a
+              class="menu-soc__link"
+              href="https://uk-ua.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Facebook
+            </a>
+          </li>
+          <li class="menu-soc__item">
+            <a
+              class="menu-soc__link"
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Linkedin
             </a>
           </li>
         </ul>
@@ -167,12 +281,35 @@
                 class="galery__link link"
               >
                 <div class="galery__wrap">
-                  <img
-                    src="./images/technoquack.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/technoquack-mob.jpg    1x,
+                        ./images/technoquack-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/technoquack.jpg 1x,
+                        ./images/technoquack.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/technoquack.jpg 1x,
+                        ./images/technoquack.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/technoquack.jpg"
+                      alt="Технокряк"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="galery__text">
                     Ресурс пропонує комплексні
                     пропозиції з різним рівнем
@@ -199,12 +336,35 @@
                 class="galery__link link"
               >
                 <div class="galery__wrap">
-                  <img
-                    src="./images/poster.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/poster-mob.jpg    1x,
+                        ./images/poster-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/poster.jpg 1x,
+                        ./images/poster.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/poster.jpg 1x,
+                        ./images/poster.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/poster.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="galery__text">
                     Ресурс пропонує комплексні
                     пропозиції з різним рівнем
@@ -235,12 +395,35 @@
                 class="galery__link link"
               >
                 <div class="galery__wrap">
-                  <img
-                    src="./images/seafood_restaurant.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/seafood_restaurant-mob.jpg    1x,
+                        ./images/seafood_restaurant-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/seafood_restaurant.jpg 1x,
+                        ./images/seafood_restaurant.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/seafood_restaurant.jpg 1x,
+                        ./images/seafood_restaurant.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/seafood_restaurant.jpg"
+                      alt="Ресторан Seafood"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="galery__text">
                     Ресурс пропонує комплексні
                     пропозиції з різним рівнем
@@ -268,12 +451,35 @@
                 class="galery__link link"
               >
                 <div class="galery__wrap">
-                  <img
-                    src="./images/headphones.jpg"
-                    alt="Проєкт Prime"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/headphones-mob.jpg    1x,
+                        ./images/headphones-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/headphones.jpg 1x,
+                        ./images/headphones.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/headphones.jpg 1x,
+                        ./images/headphones.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/headphones.jpg"
+                      alt="Проєкт Prime"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="galery__text">
                     Ресурс пропонує комплексні
                     пропозиції з різним рівнем
@@ -301,12 +507,35 @@
                 class="galery__link link"
               >
                 <div class="galery__wrap">
-                  <img
-                    src="./images/project_вoxes.jpg"
-                    alt="Проєкт Boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project_вoxes-mob.jpg    1x,
+                        ./images/project_вoxes-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project_вoxes.jpg 1x,
+                        ./images/project_вoxes.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project_вoxes.jpg 1x,
+                        ./images/project_вoxes.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/project_вoxes.jpg"
+                      alt="Проєкт Boxes"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="galery__text">
                     Ресурс пропонує комплексні
                     пропозиції з різним рівнем
@@ -334,12 +563,35 @@
                 class="galery__link link"
               >
                 <div class="galery__wrap">
-                  <img
-                    src="./images/inspiration_has_no_borders.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/inspiration_has_no_borders-mob.jpg    1x,
+                        ./images/inspiration_has_no_borders-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration_has_no_borders.jpg 1x,
+                        ./images/inspiration_has_no_borders.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration_has_no_borders.jpg 1x,
+                        ./images/inspiration_has_no_borders.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/inspiration_has_no_borders.jpg"
+                      alt="Inspiration has no Borders"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="galery__text">
                     Ресурс пропонує комплексні
                     пропозиції з різним рівнем
@@ -369,12 +621,35 @@
                 class="galery__link link"
               >
                 <div class="galery__wrap">
-                  <img
-                    src="./images/vidanna_limited_edition.jpg"
-                    alt="Видання Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/vidanna_limited_edition-mob.jpg    1x,
+                        ./images/vidanna_limited_edition-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/vidanna_limited_edition.jpg 1x,
+                        ./images/vidanna_limited_edition.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/vidanna_limited_edition.jpg 1x,
+                        ./images/vidanna_limited_edition.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/vidanna_limited_edition.jpg"
+                      alt="Видання Limited Edition"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="galery__text">
                     Ресурс пропонує комплексні
                     пропозиції з різним рівнем
@@ -404,12 +679,35 @@
                 class="galery__link link"
               >
                 <div class="galery__wrap">
-                  <img
-                    src="./images/project_LAB.jpg"
-                    alt="Проєкт LAB"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project_LAB-mob.jpg    1x,
+                        ./images/project_LAB-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project_LAB.jpg 1x,
+                        ./images/project_LAB.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project_LAB.jpg 1x,
+                        ./images/project_LAB.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/project_LAB.jpg"
+                      alt="Проєкт LAB"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="galery__text">
                     Ресурс пропонує комплексні
                     пропозиції з різним рівнем
@@ -437,12 +735,35 @@
                 class="galery__link link"
               >
                 <div class="galery__wrap">
-                  <img
-                    src="./images/growing_Business.jpg"
-                    alt="Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/growing_Business-mob.jpg    1x,
+                        ./images/growing_Business-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/growing_Business.jpg 1x,
+                        ./images/growing_Business.jpg 2x
+                      "
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/growing_Business.jpg 1x,
+                        ./images/growing_Business.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/growing_Business.jpg"
+                      alt="Growing Business"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="galery__text">
                     Ресурс пропонує комплексні
                     пропозиції з різним рівнем

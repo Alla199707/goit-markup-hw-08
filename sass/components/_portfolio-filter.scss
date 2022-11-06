@@ -30,11 +30,8 @@
   }
 }
 .filter__list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
-  //   justify-content: space-between;
+  gap: 8px;
+  row-gap: 15px;
 }
 .filter__item:not(:last-child) {
   margin-right: 8px;
