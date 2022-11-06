@@ -39,31 +39,32 @@
   <body>
     <header class="page-header">
       <div class="container main-nav">
-        <nav class="main-nav">
-          <a
-            class="main-nav__logo logo"
-            href="./index.html"
-            lang="en"
-            >Web<span class="logo__header"
-              >Studio</span
-            >
-            <!-- <button
-              type="button"
-              class="menu-toggle"
-              data-menu-close
-            >
-              <svg
-                class="menu-toggle__img"
-                width="40"
-                height="40"
-                aria-label="Перемикач мобільного меню"
-              >
-                <use
-                  href="./images/symbol-defs.svg#icon-menu"
-                ></use>
-              </svg>
-            </button> -->
-          </a>
+        <a
+          class="main-nav__logo logo"
+          href="./index.html"
+          lang="en"
+          >Web<span class="logo__header"
+            >Studio</span
+          >
+        </a>
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="mob-menu__img"
+            width="40"
+            height="40"
+            aria-label="Перемикач мобільного меню"
+          >
+            <use
+              href="./images/symbol-defs.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
+        <nav class="main-menu">
           <ul class="main-nav__list list">
             <li class="main-nav__item">
               <a
@@ -123,22 +124,102 @@
           </li>
         </ul>
       </div>
-      <div class="mob-menu">
-        <!-- <button
-          class="menu-toggle"
-          data-menu-close
-        >
-          <svg
-            class="menu-toggle__img"
-            width="40"
-            height="40"
-            aria-label="Перемикач мобільного меню"
-          >
+      <div
+        class="menu-container js-menu-container"
+        id="mobile-menu"
+      >
+        <button class="menu-toggle js-close-menu">
+          <svg width="40" height="40">
             <use
-              href="./images/symbol-defs.svg#icon-close"
+              href="./images/symbol-defs.svg#icon-close_mob"
             ></use>
           </svg>
-        </button> -->
+        </button>
+        <nav>
+          <ul class="mobile-menu list">
+            <li>
+              <a
+                href="./index.html"
+                class="mobile-menu__link mobile-menu__link--current"
+                >Студія</a
+              >
+            </li>
+            <li>
+              <a
+                href="./portfolio.html"
+                class="mobile-menu__link"
+                >Портфоліо</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="mobile-menu__link"
+                >Контакти</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <ul
+          class="mobile-menu mobile-menu--current list"
+        >
+          <li>
+            <a
+              href="tel:+380961111111"
+              class="mobile-menu__tel"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:info@devstudio.com"
+              class="mobile-menu__mail"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="menu-soc__list list">
+          <li class="menu-soc__item">
+            <a
+              class="menu-soc__link"
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Instagram
+            </a>
+          </li>
+          <li class="menu-soc__item">
+            <a
+              class="menu-soc__link"
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Twitter
+            </a>
+          </li>
+          <li class="menu-soc__item">
+            <a
+              class="menu-soc__link"
+              href="https://uk-ua.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Facebook
+            </a>
+          </li>
+          <li class="menu-soc__item">
+            <a
+              class="menu-soc__link"
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Linkedin
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
@@ -279,7 +360,7 @@
           </ul>
         </div>
       </section>
-      <section class="team__section section">
+      <section class="team__section">
         <div class="container">
           <h2 class="team__title">
             Наша команда
@@ -659,14 +740,14 @@
                   "
                   media="(min-width: 1200px)"
                 />
-              <img
-                class="team__img"
-                src="./images/img_Михайло_Єрмаков.jpg"
-                alt="Михайло Єрмаков"
-                width="270"
-                height="294"
-              />
-               </picture>
+                <img
+                  class="team__img"
+                  src="./images/img_Михайло_Єрмаков.jpg"
+                  alt="Михайло Єрмаков"
+                  width="270"
+                  height="294"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__content__list">
                   Михайло Єрмаков
@@ -756,7 +837,7 @@
           </ul>
         </div>
       </section>
-      <section class="clients section">
+      <section class="clients">
         <div class="container">
           <h2 class="clients__title">
             Постійні клієнти
