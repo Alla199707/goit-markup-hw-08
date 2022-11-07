@@ -114,7 +114,7 @@ img {
 .page-header {
   padding: 24px 0;
   border-bottom: 1px solid var(--line-color);
-  position: absolute;
+  position: sticky;
   display: flex;
   align-items: center;
   top: 0;
@@ -177,7 +177,6 @@ img {
 @media screen and (min-width: 768px) {
   .main-nav__list {
     display: flex;
-    margin-left: 88px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -824,6 +823,13 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .tablet-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .footer__wrap {
   min-width: 232px;
 }
@@ -832,38 +838,26 @@ img {
     margin-right: 165px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .footer__wrap {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
 
 .logo__footer {
   color: var(--secondory-white-color);
-}
-
-@media screen and (max-width: 1199px) {
-  .logo {
-    display: block;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 .footer__adress {
   margin-top: 20px;
   font-style: normal;
 }
-@media screen and (max-width: 1199px) {
-  .footer__adress {
-    margin-bottom: 60px;
-  }
-}
 
 .footer__list {
   display: flex;
   flex-direction: column;
   gap: 9px;
-}
-@media screen and (max-width: 1199px) {
-  .footer__list {
-    align-items: center;
-  }
 }
 
 .footer__link {
@@ -1053,17 +1047,19 @@ img {
 }
 
 .filter {
+  margin-bottom: 50px;
   justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .filter {
+    margin-bottom: 40px;
+    justify-content: flex-start;
+  }
 }
 @media screen and (max-width: 1199px) {
   .filter {
     margin-bottom: 30px;
   }
-}
-
-.projects__section {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .galery__list {
@@ -1181,11 +1177,20 @@ img {
   transform: translate(-50%, -50%) rotateX(0deg);
   transition: transform 250ms var(--timing-function);
   width: 528px;
-  height: 582px;
   background-color: var(--secondory-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+  }
 }
 
 .modal-close__icon {
@@ -1225,6 +1230,7 @@ img {
 }
 
 .modal__title {
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -1321,6 +1327,12 @@ img {
   cursor: pointer;
   color: var(--owner-text-color);
   line-height: 1.71;
+}
+@media screen and (max-width: 1199px) {
+  .modal-checkbox__label {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .checkbox__check {
